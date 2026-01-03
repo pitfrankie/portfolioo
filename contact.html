@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="stylesheet.css">
+    <link href='https://cdn.boxicons.com/3.0.5/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+
+
+
+<style>
+/* ================= BACKGROUND (DO NOT TOUCH) ================= */
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column; /* IMPORTANT */
+    background: url('8292.jpg') no-repeat center center fixed;
+    background-size:cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= MAIN LAYOUT ================= */
+.contact-wrapper{
+    margin-top: 140px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:40px;
+    width:90%;
+    max-width:1150px;
+}
+
+/* ================= CARD BASE ================= */
+.card{
+    
+    background:#fff;
+    border-radius:14px;
+    padding:30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* ================= TITLE BARS ================= */
+.title-left{
+    background:#0b1f3a;
+    color:#fff;
+    padding:14px;
+    text-align:center;
+    font-weight:bold;
+    border-radius:8px;
+    margin-bottom:35px;
+}
+
+.title-right{
+    background:#0b1f3a;
+    color:#fff;
+    padding:14px;
+    text-align:center;
+    font-weight:bold;
+    border-radius:8px;
+    margin-bottom:25px;
+}
+
+/* ================= LEFT INFO GRID ================= */
+.contact-info{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:25px;
+}
+
+.contact-box{
+    background:#ffffff;
+    border-radius:14px;
+    padding:25px 20px;
+    text-align:center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition:0.3s ease;
+}
+
+.contact-box:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+}
+
+.contact-box i{
+    font-size:38px;
+    color:#0b1f3a;
+    margin-bottom:12px;
+}
+
+.contact-box h4{
+    font-size:16px;
+    color:#0b1f3a;
+    margin-bottom:6px;
+}
+
+.contact-box p{
+    font-size:14px;
+    color:#333;
+    line-height:1.4;
+}
+
+/* ================= FORM ================= */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:12px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+textarea{
+    resize:none;
+    height:110px;
+}
+
+.captcha{
+    background:#eee;
+    padding:12px;
+    font-size:14px;
+    border-radius:6px;
+}
+
+button{
+    background:#0b1f3a;
+    color:#fff;
+    border:none;
+    padding:14px;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#163b6f;
+}
+
+.page-content{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+    .contact-wrapper{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+    .contact-info{
+        grid-template-columns:1fr;
+    }
+}
+
+.footer{
+    margin-top:40px;
+}
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+
+  body{
+    align-items: stretch;
+  }
+
+  .page-content{
+    padding: 20px;
+  }
+
+  .contact-wrapper{
+    grid-template-columns: 1fr;   /* ⭐ ONE COLUMN */
+    gap: 25px;
+    width: 100%;
+    margin-top: 120px;
+  }
+
+  .card{
+    width: 100%;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+
+     <header class="header">
+        <a href="index.html#" class="logo">MyPortfolio</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+
+        <nav class="navbar">
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#skills">Skills</a>
+           <a href="index.html#Eductour">Educ tour</a>
+<a href="index.html#certificate">Certificates</a>
+<a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+<!-- PAGE CONTENT -->
+<div class="page-content">
+    <div class="contact-wrapper">
+
+        <!-- LEFT CARD -->
+        <div class="card">
+            <div class="title-left">Get In Touch With Me!</div>
+
+            <div class="contact-info">
+                <div class="contact-box">
+                    <i class='bx bx-phone'></i>
+                    <h4>Phone Number</h4>
+                    <p>09629913258</p>
+                </div>
+
+                <div class="contact-box">
+                    <i class='bx bx-envelope'></i>
+                    <h4>Email</h4>
+                    <p>cenizaplayz@gmail.com</p>
+                </div>
+
+                <div class="contact-box">
+                    <i class='bx bxl-facebook'></i>
+                    <h4>Facebook</h4>
+                    <p>Pit frankie basultin ceniza</p>
+                </div>
+
+                <div class="contact-box">
+                    <i class='bx bx-map'></i>
+                    <h4>Location</h4>
+                    <p>Sta. Ana Ave, Poblacion District, Davao City</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT CARD -->
+        <div class="card">
+            <div class="title-right">Contact Me</div>
+
+            <form>
+                <input type="text" placeholder="First Name *">
+                <input type="text" placeholder="Last Name *">
+                <input type="text" placeholder="Mobile No *">
+                <input type="email" placeholder="Email ID *">
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">Submit ➤</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="social">
+        <a href="https://www.facebook.com/pit.ceniza"><i class='bx bxl-facebook'></i></a>
+        <a href="https://www.instagram.com/shin_zer0"><i class='bx bxl-instagram'></i></a>
+        <a href="https://www.tiktok.com/@cenizaplayz"><i class='bx bxl-tiktok'></i></a>
+    </div>
+    <p class="copyright">
+        &copy; Pit Frankie B. Ceniza. All rights reserved.
+    </p>
+</footer>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+</body>
+
+</html>
