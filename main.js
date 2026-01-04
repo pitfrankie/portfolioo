@@ -143,3 +143,43 @@ if (certModal && certModalImg) {
 certClose?.addEventListener("click", () => {
   certModal.style.display = "none";
 });
+
+
+// Animate skills on scroll
+const skillSection = document.querySelector(".skills");
+
+const observer = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) {
+
+    // LEFT: Progress bars
+    document.querySelectorAll(".progress").forEach(bar => {
+      const percent = bar.dataset.percent;
+      bar.style.width = percent + "%";
+
+      // sync text
+      const text = bar.parentElement.querySelector(".percent");
+      if (text) text.textContent = percent + "%";
+    });
+
+    // RIGHT: Circle skills
+    document.querySelectorAll(".circle-skill").forEach(skill => {
+      const percent = skill.dataset.percent;
+      const circle = skill.querySelector(".fg");
+      const text = skill.querySelector("span");
+
+      const radius = 65;
+      const circumference = 2 * Math.PI * radius;
+
+      circle.style.strokeDasharray = circumference;
+      circle.style.strokeDashoffset =
+        circumference - (percent / 100) * circumference;
+
+      // sync text
+      if (text) text.textContent = percent + "%";
+    });
+
+    observer.disconnect();
+  }
+}, { threshold: 0.4 });
+
+observer.observe(skillSection);
